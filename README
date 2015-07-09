@@ -1,0 +1,11 @@
+Usage: python run.py filename
+
+Design Choices
+
+run.py contains a class named ParseHandler which reads the input files and compares it with all the rules defined in the rules.py file. The rules.py file contains an abstract class called Rule, each rule will inherit from this Rule class and define a function called execute which contains a predicate. 
+
+Any class that inherits from the Rule class will be used by the ParseHandler to compare the input. If all the rules pass then the output will be written to valid.csv, otherwise the output will be written to invalid.csv.
+
+Test Cases
+
+rules_test.py contains a sample of test cases. This includes testing whether invalid files are handled correctly, if the files are created appropriately, and if the output to the files is correct.
